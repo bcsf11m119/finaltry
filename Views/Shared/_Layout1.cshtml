@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="~/Scripts/bootstrap.js"></script>
+    @*<script src="bootstrap.js">
+        </script>*@
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+    <script>
+        function f1() {
+            $('li').text().fontcolor("bisque");
+        }
+        function f2() {
+            $('li').text().fontcolor("antiquewhite");
+        }
+    </script>
+
+</head>
+<body style="background-image:url(/Images/background2.jpg);background-size:1000px ">
+
+    <nav class="nav navbar-default" role="navigation" style="background-color:black">
+
+        <div class="navbar-header" style="height:130px">
+            <a class="navbar-brand" style="color:silver"><h1> HTunes HjMusic</h1> </a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/Home/Index">Home</a></li>
+                @*<li onmouseover="f1" onmouseout="f2" id="1"> <a href="#">My Profile</a></li>*@
+                <li onmouseover="f1" onmouseout="f2"><a href="/Account/PlayList">My Playlist</a></li>
+                <li onmouseover="f1" onmouseout="f2" id="3"><a href="/Home/About">About Us</a></li>
+                @*<li onmouseover="f1" onmouseout="f2" id="4"><a href="#">Settings</a></li>*@
+                <li onmouseover="f1" onmouseout="f2" id="5"> <a href="/Account/Register">Sign up</a></li>
+                <li onmouseover="f1" onmouseout="f2" id="6"> <a href="/Account/Login">Login</a></li>
+                @*<li onmouseover="f1" onmouseout="f2" id="7"> <a href="/Account/Upload">Upload</a></li>*@
+
+
+            </ul>
+
+
+            <form class="navbar-form navbar-left pull-right" role="search" action="/Home/Search">
+
+                <div class="form-group">
+
+                    <input type="text" name="search" id="i1" placeholder="Search" style="width:350px;border-top-left-radius:20px;border-bottom-right-radius:20px;border-bottom-left-radius:5px;border-top-right-radius:5px" />
+                </div>
+
+                <button class="btn btn" type="submit">
+                    Search
+                </button>
+                @*<input type="submit" value="Search" />*@
+                <br />
+            </form>
+
+        </div>
+    </nav>
+    <br />
+    <br />
+
+    <div class="container-fluid">
+        <div class="=row">
+
+
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 ">
+                    @RenderBody();
+                </div>
+                <div class="col-md-2">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+    <div style="height :100px">
+
+    </div>
+
+
+    <div align="left">
+
+        <!--<video src="minions.mp4" id="1" autoplay controls height="360"> </video>-->
+
+    </div>
+
+    <!--<video src="C:\Users\Zeil E Huma\Videos\Add_Template_To_MVC.mp4"></video>-->
+</body>
+</html>
+
+<!--
+
+
+    <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <script src="bootstrap.js" ></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-default"  role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" > Habile Business Organization</a>
+        </div>
+
+        <div>
+
+            <ul class="nav navbar-nav" >
+                <li class="active" ><a href="#" > Home </a> </li>
+                <li> <a href="#"> Products</a></li>
+                <li> <a href="#" >About </a> </li>
+                <li> <a href="#" > Contact us </a> </li>
+                <li> <a href="#">Sign Up </a> </li>
+            </ul>
+
+        <form class="navbar-form navbar-left pull-right" role="search" >
+
+            <div class="form-group"  >
+
+                <input type="text" id="i1" placeholder="Search"/>
+            </div>
+            <button class="btn btn" type="submit" >
+                Submit
+            </button>
+
+            <br />
+      </form>
+            </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="=row">
+
+        <div class="alert-success" style="height:100px">
+         <h1>       Customer Registration </h1>
+
+        </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 ">
+                    <form>
+
+                        <div class="form-group">
+                            Company Name : <input type="text" />
+                            <br />
+
+                            Address: <input type="text" />
+                            <br />
+
+                            Phone Number : <input type="text" /> <br />
+                            Address: <input type="text" /><br />
+                            Email : <input type="email" /><br />
+                            UserName : <input type="text" />
+                            <button type="button">
+                                check
+                            </button>
+                            <br />
+                            password: <input type="password" /><br />
+                            <button type="button">
+                                Register
+                            </button>
+                            <br />
+
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="col-md-4">.col-md-4</div>
+            </div>
+    </div>
+        <div>
+
+        </div >
+        <div style="height :100px">
+
+        </div>
+    <footer class="modal-footer" > </footer>
+
+    </div>
+</body>
+</html>
+
+-->
+@*<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - My ASP.NET Application</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>*@
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout1</title>
+</head>
+<body>
+    <div> 
+    </div>
+</body>
+</html>

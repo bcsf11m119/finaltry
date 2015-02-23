@@ -1,0 +1,28 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+    var s = ViewBag.us;
+    ViewBag.u = s;
+    //var v = ViewBag.list;
+
+}
+<form action="/Account/UploadFile" enctype="multipart/form-data" method="post">
+
+    <label> Video Name</label><br />
+    <input type="text" name="Name" />
+    <br /><br />
+    <label>Video Descrption</label><br />
+    @*@Html.TextBox("mytextbox");*@
+    
+    <input type="text" name="description" /><br /><br />
+    <input type="file" name="file" /><br />
+    @*<input type="submit" value="Upload" />*@
+    <br /><br />
+    <label style="width:70px"> email</label><br />
+    <input type="email" name="email" /><br />
+    <label style="width:70px">Password</label><br />
+    <input type="password" name="pass" />
+    <input type="submit" value="Upload" />
+</form>
+

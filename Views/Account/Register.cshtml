@@ -1,0 +1,109 @@
+﻿
+@model EADproject.Models.User
+
+@{
+    //Layout = "~/Views/Shared/_Layout1.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form action="/Account/CreateUser" method="post">
+
+    <div class="form-group pull-left">
+        <label style="width:80px">User Name</label> 
+        @Html.TextBoxFor(x => x.Username)
+        <br />
+
+        <label style="width:80px">Address</label>  
+        @Html.TextBoxFor(y=> y.Address)
+        <br />
+
+        <label style="width:80px">Phone number</label> 
+        @Html.TextBoxFor(x => x.Phone);
+        
+        
+        <br />
+
+
+        <label style="width:80px">Email </label>
+        @*@Html.TextBoxFor(x => x.Email);*@
+        @Html.TextBoxFor(x => x.Email, "example@gmail.com");
+        
+        <br />
+        @*<label style="width:80px"> UserName</label><input type="text" name="Username"/>
+        @Html.TextBoxFor(x => x.Username);
+        <br />*@
+        <label style="width:80px"> Password </label>
+        @*//@Html.TextBoxFor(x => x.Password);*@
+        @Html.PasswordFor(x => x.password);
+        
+        <br />
+        <br />
+        <input id="b1"type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+        <br />
+
+    </div>
+    <div>
+
+        @*<script>
+            $('#b1').click(function () {
+                $.getJSON("/Account/SubmitGet?u=", function (data) {
+
+                });
+
+                </script>*@
+
+
+
+        </div>
+
+    </form>
+
+
+
+
+
+
+
+
+                    @*@model WebApplication3.Models.RegisterViewModel
+    @{
+        ViewBag.Title = "Register";
+    }
+
+    <h2>@ViewBag.Title.</h2>
+
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Create a new account.</h4>
+        <hr />
+        @Html.ValidationSummary()
+        <div class="form-group">
+            @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" value="Register" />
+            </div>
+        </div>
+    }
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@

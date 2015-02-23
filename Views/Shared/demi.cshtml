@@ -1,0 +1,25 @@
+﻿@model EADproject.Models.Video
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+    var s = ViewBag.list;
+    var u = ViewBag.us;
+}
+
+
+
+@*<video src="@Model .mp4"
+
+    ></video>*@
+
+@*<p> value : @Model.Name </p>*@
+
+@*@if(@Model.Name.Substring(@Model.Name.Length-4).Equals(".mp4"))*@
+
+<video controls="controls" height="400" autoplay>
+
+    <source src="~/upload/Demi_20Lovato_20-_20Heart_20Attack_20_5B128_5D.mp3" type="audio/mpeg" />
+</video>
+
+@*<audio controls="controls">
+    <source src="~/upload/Demi_20Lovato_20-_20Heart_20Attack_20_5B128_5D.mp3" type="audio/mpeg" />
+</audio>*@

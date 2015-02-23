@@ -1,0 +1,86 @@
+﻿@model EADproject.Models.Playlist
+@*@model EADproject.Models.User*@
+@*@model  EADproject.Models.Video*@
+
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //EADproject.Models.Playlist [] p = (EADproject.Models.Playlist [])@Model.Playlists;
+    //@Model = ViewBag.list;    
+    //var s = v.;
+    var s = ViewBag.list;
+    var u = ViewBag.us;
+    ViewBag.ui = u;
+    ViewBag.l = s;
+    //Array a;
+}
+
+
+<h1 style="color:gray">My Playlists</h1>
+
+
+@if (ViewBag.list == null)
+{
+    <p> Your are not logined or your session has expired. Please Login again to Continue</p>     
+}
+else
+{ 
+    
+    @*@for (int i = 0; i < 10; i++)*@
+    @*<form action="/Account/Upload">*@
+
+        foreach (var i in s)
+        {
+
+            <div>
+                <img src="/Images/3d party light 3d effects backgrounds wallpapers.jpg"
+                     style="width:110px;height:120px" />
+                <label>
+                    @*Playlist @i.Name*@
+                    <a href="/Home/Play?name=@i.Name">@i.Name</a>
+                </label>
+
+            </div>
+            <br />
+        }
+        <div>
+            <label> @Model </label>
+            <div>
+                @*<form action="/Account/Upload">
+                @ViewBag.us=@u;*@
+                @*<a href="/Account/UploadGet">*@
+                <input type="submit" value="Upload your video" id="b1"/>
+                    @*</a>*@
+
+                @*</form>*@
+
+            </div>
+            
+
+        </div>
+
+        <div id="d1">
+        <script>
+            $('#b1').click(function () {
+                $.getJSON("/Account/UploadGet", function (data) {
+                    var x = $("#d1");
+                    x.append("<form action=\"/Account/UploadFile\" enctype=\"multipart/form-data\" method=\"post\">"
+
+        + "<label> Video Name</label><br />"
+        + "<input type=\"text\" name=\"Name\" />"
+        + "<br /><br />"
+        + "<label>Video Descrption</label><br />"
+        + "<input type=\"text\" name=\"description\" /><br /><br />"
+        + "<input type=\"file\" name=\"file\" /><br />"
+        + "<br /><br />"
+
+        + "<input type=\"submit\" value=\"Upload\" />"
+    + "</form>");
+                }
+                );
+            });
+        </script>
+        </div>
+    @*</form>*@
+}

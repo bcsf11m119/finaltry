@@ -1,0 +1,41 @@
+﻿@model  List<EADproject.Models.Video>
+
+@{
+    
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+    var s1 = ViewBag.list;
+    var u = ViewBag.us;
+}
+
+
+<div>
+    <h1> Search Results</h1>
+
+    @foreach (var s in Model)
+    {
+        
+        <div>
+            
+            
+            @*@Html.LabelFor(x => s.Name);
+            @Html.ActionLink(@s.Name, "/Play");*@
+        <label >
+             <a style="color:gray" href="/Home/Play?name=@s.Name" >@s.Name</a>
+            @*@s.Name*@
+
+            @*@Html.ActionLink(@s.Name,"/Play","/Home",@s.Name)*@
+            </label><br />
+            <img src="/Images/3d party light 3d effects backgrounds wallpapers.jpg"
+                 style="width:110px;height:120px" /> 
+
+            <label>@s.Description </label>
+            <br />
+        @*<label>@s</label>*@
+            
+            </div>
+        <br />
+    }
+</div>
+
+
+
