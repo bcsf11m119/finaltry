@@ -15,6 +15,7 @@
 
 @*@if(@Model.Name.Substring(@Model.Name.Length-4).Equals(".mp4"))*@
 
+<label> @Model.Name</label><br />
 <video controls="controls" height="400" autoplay>
     <source src="~/upload/@Model.Name" type="video/mp4" />
     <source src="~/upload/@Model.Name" type="audio/mp3" />

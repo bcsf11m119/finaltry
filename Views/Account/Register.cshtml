@@ -27,7 +27,8 @@
         <label style="width:80px">Email </label>
         @*@Html.TextBoxFor(x => x.Email);*@
         @Html.TextBoxFor(x => x.Email, "example@gmail.com");
-        
+        @*<input name="email" type="email" id="i1"/>*@
+        <label id="l1"></label>
         <br />
         @*<label style="width:80px"> UserName</label><input type="text" name="Username"/>
         @Html.TextBoxFor(x => x.Username);
@@ -43,15 +44,27 @@
         <br />
 
     </div>
+    <div id="created">
+
+    </div>
     <div>
 
-        @*<script>
-            $('#b1').click(function () {
-                $.getJSON("/Account/SubmitGet?u=", function (data) {
+        <script>
+            //$('#b1').click(function () {
+            //    var e = $("i1").val();
+            //    $.getJSON("/Account/SubmitGet?u=" + e, function (data) {
+            //        if (!data) {
+            //            $("l1").text("user not available");
+            //            return false;
+            //        }
+            //        else {
+            //            $("l1").text("user created successfully");
+            //            return true;
+            //        }
 
-                });
-
-                </script>*@
+            //    });
+            //});
+                </script>
 
 
 
